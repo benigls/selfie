@@ -20,13 +20,17 @@ class MY_Model extends CI_Model{
 
 	public function login($username, $password){
 		if($username == "admin" && $password == "admin"){
-			return "admin";
+			$data["id"] = 0;
+			$data["return"] = "admin";
+			return $data;
 		}
 		else{
 			$query = $this->db->get("user_tbl");
 			foreach ($query->result() as $row) {
 				if($row->user_name == $username && $row->password == $password){
-					return "user";
+					$data["id"] = $row->id;
+					$data["return"] = "user";
+					return $data;
 				}
 			}	
 		}
