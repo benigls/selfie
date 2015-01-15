@@ -9,7 +9,7 @@ class Main_Controller extends CI_Controller{
 
 
 	public function index(){
-		$this->home();
+		$this->admin();
 	}
 
 	public function home(){
@@ -23,6 +23,16 @@ class Main_Controller extends CI_Controller{
 	}
 	public function register(){
 		$data["content"] = "register";
+		$this->load->view("main_view", $data);
+	}
+
+	public function admin(){
+		$data["content"] = "admin";
+		$this->load->view("main_view", $data);
+
+	}
+	public function sudoadmin(){
+		$data["content"] = "sudoadmin";
 		$this->load->view("main_view", $data);
 	}
 
