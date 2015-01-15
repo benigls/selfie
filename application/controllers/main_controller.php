@@ -9,10 +9,12 @@ class Main_Controller extends CI_Controller{
 
 
 	public function index(){
-		&this->home();
+		$this->home();
 	}
 
 	public function home(){
-		
+		$data["content"] = "home";
+		$this->load->view("main_view", $data);
 	}
-?>
+
+}?>
