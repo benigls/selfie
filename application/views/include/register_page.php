@@ -2,7 +2,7 @@
 <?php echo form_open("pendinguser_controller/register"); ?>
 <div class="row">
     <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
-		<form role="form">
+		<?php echo form_open("pendinguser_controller/register"); ?>
 			<h2>Please Sign Up <small>It's free and always will be.</small></h2>
 			<hr class="colorgraph">
 				<div class="form-group">
@@ -62,7 +62,7 @@
 					<?php echo anchor("main_controller/login", "Login", array("class"=> "btn btn-success btn-block btn-lg")) ?>
 				</div>
 			</div>
-		</form>
+		<?php echo form_close(); ?>
 	</div>
 </div>
 <!-- Modal -->
