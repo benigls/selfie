@@ -13,9 +13,15 @@ class Pendinguser_Controller extends CI_Controller{
 		if($this->input->post("register")){
 			if($this->input->post("confirmpassword") == $this->input->post("password"))
 				$this->pendinguser_model->insert_pendinguser();
-			// else // something error
-			// $this->view_movie();
 		}
+
+		$this->home();
 	}
 
+	public function home(){
+		$data["content"] = "home";
+		$data["results"] = "";
+		$data["id"] = "0";
+		$this->load->view("main_view", $data);
+	}
 }?>

@@ -12,7 +12,6 @@ class User_Controller extends CI_Controller{
 		
 		if($this->input->post("my_login")){
 			$this->user_model->login_user();
-			// $this->view_movie();
 		}
 	}
 
