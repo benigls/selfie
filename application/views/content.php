@@ -18,7 +18,6 @@
 				<div class="table-responsive">
 					<table id="mytable" class="table table-bordred table-striped">
 					<thead>
-						<th><input type="checkbox" id="checkall" /></th>
 						<th>ID</th>
 						<th>Username</th>
 						<th>First name</th>
@@ -33,7 +32,6 @@
 						
 			foreach($results as $records) {
 				echo'<tr>
-						<td><input type="checkbox" class="checkthis" /></td>
 						<td>'.$records->id.'</td>
 						<td>'.$records->pending_user_name.'</td>
 						<td>'.$records->pending_first_name.'</td>
@@ -43,17 +41,17 @@
 						<td>'.$records->pending_email.'</td>
 						<td>'.$records->pending_address.'</td>
 						<td>'.$records->pending_date_of_term.'</td>';
+						echo'<td>';
+						echo anchor('user_controller/acceptid/'.$records->id.'', 'Accept',(array("class" => ""))); echo"&nbsp&nbsp"; 
+						echo'</td><td>';
+						echo anchor('user_controller/rejectid/'.$records->id.'', 'Reject',(array("class" => ""))); 
+						echo'</td>
+					</tr>';
 					}
 
 					echo form_close();
 					echo '	</table>
 
-						</div>
-						<div class=pull-right>';
-
-						echo anchor('user_controller/acceptid/'.$records->id.'', 'Accept',(array("class" => "btn btn-primary"))); echo"&nbsp&nbsp"; 
-						echo anchor('user_controller/rejectid/'.$records->id.'', 'Reject',(array("class" => "btn btn-primary"))); 
-						echo'
 						</div>
 						</div>
 					</div>

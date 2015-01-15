@@ -49,6 +49,7 @@ class User_model extends MY_Model{
 		$this->getuserbyid($id);
 		$data["results"] = $this->view_pendinguser();
 		$data["content"] = "admin";
+		$data["id"] = "0";
 		$this->load->view("main_view", $data);
 	}
 
@@ -56,6 +57,7 @@ class User_model extends MY_Model{
 		$this->delete("pending_user_tbl", $id);
 		$data["results"] = $this->view_pendinguser();
 		$data["content"] = "admin";
+		$data["id"] = "0";
 		$this->load->view("main_view", $data);
 	}
 }
