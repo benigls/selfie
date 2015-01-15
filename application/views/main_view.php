@@ -5,7 +5,8 @@
 
 		<?php 
 		include_once("include/navbar.php");
-		$data["content"] = $content;        
+		$data["content"] = $content;  
+		$data["results"] = $results;     
 		$this->view("content.php", $data);   
 		include_once("include/footer.php");     
 		?>

@@ -41,6 +41,7 @@
 				  <?php  
 				  	echo form_submit(array("name" => "add_event", "value" => "Add Event", "class" => "btn btn-primary"));	
 				    echo form_submit(array("name" => "clear", "value" => "Clear", "class" => "btn btn-primary"));
+				    echo form_close();
 				    ?>
 				  </div>
 				</div>

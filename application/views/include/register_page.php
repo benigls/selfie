@@ -85,6 +85,7 @@ echo'
 				  <div class="panel-body" align = "center">';
 				    echo form_submit(array("name" => "register", "value" => "Register", "class" => "btn btn-primary"));	
 				    echo form_submit(array("name" => "clear", "value" => "Clear", "class" => "btn btn-primary"));
+				    echo form_close();
 				    echo'
 				  </div>
 				</div>';

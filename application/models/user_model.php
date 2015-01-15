@@ -6,7 +6,7 @@ class User_model extends MY_Model{
 
 		$typeofuser = $this->login($user_name, $password);
 		if($typeofuser == "admin"){
-
+			$data["results"] = $this->view_pendinguser();
 			$data["content"] = "admin";
 			$this->load->view("main_view", $data);
 		}
@@ -26,6 +26,10 @@ class User_model extends MY_Model{
 		);
 
 		$this->insert("user_tbl", $dataUser);
+	}
+
+	public function view_pendinguser(){
+		return $this->view_all("pending_user_tbl");
 	}
 }
 ?>

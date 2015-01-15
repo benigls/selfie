@@ -15,5 +15,4 @@ class User_Controller extends CI_Controller{
 			// $this->view_movie();
 		}
 	}
-
 }?>
