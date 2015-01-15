@@ -21,11 +21,10 @@
                                     </div>
                                     <!-- Change this to a button or input when using this as a form -->
                                         <?php echo form_submit(array("name" => "my_login", "value" => "Login", "class" => "btn btn-sm-btnsuccess")); ?>
-
-                                </fieldset>
-                            <?php echo form_close(); ?>
-                            <!-- </form> -->
-                        </div>
+            
+                        </fieldset>
+                        <?php echo form_close(); ?>
                     </div>
-    </div>
+</div>
+</div>
 </div>
