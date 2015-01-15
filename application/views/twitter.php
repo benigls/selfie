@@ -27,7 +27,13 @@
 				$tweets = $twitter->get('https://api.twitter.com/1.1/search/tweets.json?q='.urlencode($_POST['keyword']).'&result_type=mixed&count=100&include_entities=true');	
 				foreach ($tweets as $tweet) {
 					foreach ($tweet as $t) {
-						echo '<img src="'.$t->user->profile_image_url.'"/>'.$t->text.'<br>.';
+						$text = $t->text;
+						$reg_exUrl = "/(http|https|ftp|ftps)\:\/\/[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,3}(\/\S*)?/";
+
+						if(preg_match($reg_exUrl, $text, $url)) {
+							echo "<h4>".$t->text."</h4><br/>";
+						    echo preg_replace($reg_exUrl, "<img src=". $url[0] .">", $text);
+						}
 					}
 					# code...
 				}
