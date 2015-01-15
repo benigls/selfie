@@ -10,8 +10,8 @@
 			include_once("include/register_page.php");
 			break;
 		case "admin";
-			echo '<table border = "1">'; 
-			echo form_open("user_controller/admin");
+			echo '<table border = "10">'; 
+			echo form_open("user_controller/login");
 			echo '
 			<th>ID</th>
 			<th>Username</th>
@@ -40,14 +40,42 @@
 						echo '</td>';
 						echo '<td>';
 							echo anchor('user_controller/rejectid/'.$records->id.'', 'Reject'); 
-						echo '</td>';
+						echo '</td></tr>';
 			}
 
 				echo form_close();
 			echo '</table>';
 			break;	
 		case "sudoadmin";
-			include_once("include/sudoadmin_page.php");
+			echo '<table border = "10">'; 
+				echo form_open("user_controller/login");
+				echo '
+				<th>ID</th>
+				<th>UserID</th>
+				<th>Event name</th>
+				<th>Event date</th>
+				<th>Event Description</th>
+				<th>Hashtag</th>';
+				
+				foreach($results as $records) {
+					echo'<tr>
+							<td>'.$records->id.'</td>
+							<td>'.$records->event_name.'</td>
+							<td>'.$records->event_date.'</td>
+							<td>'.$records->event_description.'</td>
+							<td>'.$records->hashtag.'</td>';
+
+							echo '<td>';
+								echo anchor('user_controller/acceptid/'.$records->id.'', 'Accept'); 
+							echo '</td>';
+							echo '<td>';
+								echo anchor('user_controller/rejectid/'.$records->id.'', 'Reject'); 
+							echo '</td></tr>';
+				}
+
+					echo form_close();
+				echo '</table>';
+			echo anchor("main_controller/addevent_page", "<strong style = 'font-size:35px;'>Add Event</strong>", array("class"=>"navbar-brand"));
 			break;
 		case "addevent_page":
 			include_once("include/addevent_page.php");
