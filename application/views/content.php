@@ -15,5 +15,8 @@
 		case "sudoadmin";
 			include_once("include/sudoadmin_page.php");
 			break;
+		case "addevent_page":
+			include_once("include/addevent_page.php");
+			break;
 	}	
 ?>
