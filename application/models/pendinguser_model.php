@@ -3,6 +3,7 @@
 class Pendinguser_Model extends MY_Model{
 	public function insert_pendinguser(){
 		$dataUser = array(
+			"pending_username" =>  $this->input->post("username"),
 			"pending_first_name" =>  $this->input->post("firstname"),
 			"pending_middle_name" =>  $this->input->post("middlename"),
 			"pending_last_name" => $this->input->post("lastname"),
