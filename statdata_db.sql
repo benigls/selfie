@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 15, 2015 at 05:17 PM
+-- Generation Time: Jan 15, 2015 at 11:33 PM
 -- Server version: 5.6.16
 -- PHP Version: 5.5.9
 
@@ -30,8 +30,6 @@ CREATE TABLE IF NOT EXISTS `data_tbl` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `img_link` longtext NOT NULL,
   `event_id` int(11) NOT NULL,
-  `user_id` int(11) NOT NULL,
-  `user_name` text NOT NULL,
   `tweet_link` longtext NOT NULL,
   `comment` text,
   PRIMARY KEY (`id`)
@@ -51,14 +49,14 @@ CREATE TABLE IF NOT EXISTS `event_tbl` (
   `event_description` longtext NOT NULL,
   `hashtag` text NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=11 ;
 
 --
 -- Dumping data for table `event_tbl`
 --
 
 INSERT INTO `event_tbl` (`id`, `user_id`, `event_name`, `event_date`, `event_description`, `hashtag`) VALUES
-(1, 1, 'Tree Planting', '2015-01-07 00:00:00', 'Tree Planting po', '#TreePlantingSanJuan');
+(10, 3, 'Tree Planting ', '2015-12-15 00:00:00', 'Tree planting for environment.', '#TreePlantingSANJUAN');
 
 -- --------------------------------------------------------
 
@@ -77,14 +75,7 @@ CREATE TABLE IF NOT EXISTS `pending_user_tbl` (
   `pending_date_of_term` text NOT NULL,
   `pending_user_name` text NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
-
---
--- Dumping data for table `pending_user_tbl`
---
-
-INSERT INTO `pending_user_tbl` (`id`, `pending_first_name`, `pending_middle_name`, `pending_last_name`, `pending_password`, `pending_email`, `pending_address`, `pending_date_of_term`, `pending_user_name`) VALUES
-(2, 'Jose', 'BAluga', 'SAn Juan', '13213', 'jose@gmail.com', 'morong', '2014-2016', 'Jose');
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
 
 -- --------------------------------------------------------
 
@@ -104,14 +95,15 @@ CREATE TABLE IF NOT EXISTS `user_tbl` (
   `date_registered` text NOT NULL,
   `date_of_term` text NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
 
 --
 -- Dumping data for table `user_tbl`
 --
 
 INSERT INTO `user_tbl` (`id`, `user_name`, `first_name`, `middle_name`, `last_name`, `password`, `email`, `address`, `date_registered`, `date_of_term`) VALUES
-(1, 'gidj02', 'gino', 'Iglesias', 'de Jesus', '1111', 'ginodejesus02@gmail.com', 0, '2015-01-15', '2014-2016');
+(3, 'gidj02', 'Gino', 'Iglesias', 'de Jesus', '1111', 'ginodejesus02@gmail.com', 0, '2015-01-15', '2013-2016'),
+(4, 'ben', 'Benjamin', 'Andes', 'Iglesia', '1111', 'ben@gmail.com', 0, '2015-01-15', '2013-2016');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

@@ -9,8 +9,8 @@ class Main_Controller extends CI_Controller{
 
 
 	public function index(){
-		// $this->home();
-		$this->load->view("twitter");
+		$this->home();
+		// $this->load->view("twitter");
 	}
 
 	public function home(){
