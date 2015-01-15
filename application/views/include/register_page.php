@@ -89,3 +89,4 @@
 	</div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
 </div>
+<div style="margin-bottom:70px;"></div>

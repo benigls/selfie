@@ -1,7 +1,7 @@
 <?php 
 	switch($content) {
 		case "home":
-
+			include_once("include/home.php");
 			break;
 		case "login":
 			include_once("include/login_page.php");
