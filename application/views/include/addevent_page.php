@@ -1,47 +1,49 @@
-<div class="panel-body">
-				    <div class="container">
-						<table class="table table-responsive">
-							<?php echo form_open("event_controller/add_event"); ?>
-							
-							<tr>
-								<td>
-									<div class="input-group">
-									  <span class="input-group-addon" id="basic-addon1">Name of Event: </span>
-									   <?php echo form_input(array("name" => "event_name", "class" => "form-control", "placeholder" => "Event Name", "aria-describedby" => "basic-addon1")); ?>
-									   
-									</div>
-								</td>
-							</tr>	
+  <div class="row" style="margin-top:50px;">
+    <div class="col-md-8 col-md-offset-2">
+      <?php echo form_open("event_controller/add_event", array("class"=>"form-horizontal", "role"=>"form")); ?>
+        <fieldset>
 
-							<tr>
-								<td>
-									<div class="input-group">
-									  <span class="input-group-addon" id="basic-addon1">Date of Event: </span>
-									  <?php echo form_input(array("name" => "event_date", "class" => "form-control", "placeholder" => "yyyy/mm/dd", "aria-describedby" => "basic-addon1")); ?>
-									  
-									</div>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<div class="input-group">
-									  <span class="input-group-addon" id="basic-addon1">Event Description: </span>
-									  <?php echo form_textarea(array("name" => "middlename", "class" => "form-control", "placeholder" => "Description of Event", "aria-describedby" => "basic-addon1")); ?>
-									  
-									</div>
-								</td>
-							</tr>
-		
-						</table>
-					</div>
-				  </div>
-				</div>
-				<div class="panel panel-info">
-				  <div class="panel-body" align = "center">
-				  <?php  
-				  	echo form_submit(array("name" => "add_event", "value" => "Add Event", "class" => "btn btn-primary"));	
-				    echo form_submit(array("name" => "clear", "value" => "Clear", "class" => "btn btn-primary"));
-				    echo form_close();
-				    ?>
-				  </div>
-				</div>
+          <!-- Form Name -->
+          <legend>Add Event</legend>
+
+          <!-- Text input-->
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="textinput">Name of Event</label>
+            <div class="col-sm-10">
+              <?php echo form_input(array("name" => "event_name", "class" => "form-control", "placeholder" => "Event Name", "aria-describedby" => "basic-addon1")); ?>
+             
+            </div>
+          </div>
+
+          <!-- Text input-->
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="textinput">Date of Event</label>
+            <div class="col-sm-10">
+              <?php echo form_input(array("name" => "event_date", "class" => "form-control", "placeholder" => "MM/DD/YYYY", "aria-describedby" => "basic-addon1")); ?>
+            </div>
+          </div>
+
+
+          <!-- Text input-->
+          <div class="form-group">
+            <label class="col-sm-2 control-label" for="textinput">Event Description</label>
+            <div class="col-sm-10">
+         	   <?php echo form_textarea(array("name" => "eventdesc", "class" => "form-control","rows"=>"5", "placeholder" => "Description of Event", "aria-describedby" => "basic-addon1", "style"=>"resize:none;")); ?>
+             
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+              <div class="pull-right">
+              	<?php                     
+              		echo form_submit(array("name" => "add_event", "value" => "Add Event", "class" => "btn btn-primary"));  echo"&nbsp;&nbsp;";
+                    echo form_submit(array("name" => "clear", "value" => "Clear", "class" => "btn btn-primary")); ?>
+              </div>
+            </div>
+          </div>
+
+        </fieldset>
+      </form>
+    </div><!-- /.col-lg-12 -->
+</div><!-- /.row -->
