@@ -26,15 +26,18 @@
 				<div class="form-group">
 					<?php echo form_input(array("name" => "address","id" => "address", "class" => "form-control input-lg", "placeholder" => "Address", "aria-describedby" => "basic-addon1", "tabindex"=>"6")); ?>
 				</div>
+				<div class="form-group">
+					<?php echo form_input(array("name" => "dateofterm","id" => "dateofterm", "class" => "form-control input-lg", "placeholder" => "Date of Term(YYYY-YYYY)", "aria-describedby" => "basic-addon1", "tabindex"=>"7")); ?>
+				</div>
 				<div class="row">
 					<div class="col-xs-12 col-sm-6 col-md-6">
 						<div class="form-group">
-							<?php echo form_password(array("name" => "password", "id" => "confirmpassword", "class" => "form-control", "placeholder" => "Password", "aria-describedby" => "basic-addon1", "tabindex" => "7")); ?>
+							<?php echo form_password(array("name" => "password", "id" => "confirmpassword", "class" => "form-control", "placeholder" => "Password", "aria-describedby" => "basic-addon1", "tabindex" => "8")); ?>
 						</div>
 					</div>
 					<div class="col-xs-12 col-sm-6 col-md-6">
 						<div class="form-group">
-							<?php echo form_password(array("name" => "confirmpassword", "id" => "confirmpassword", "class" => "form-control", "placeholder" => "Confirm Password", "aria-describedby" => "basic-addon1", "tabindex" => "8")); ?>
+							<?php echo form_password(array("name" => "confirmpassword", "id" => "confirmpassword", "class" => "form-control", "placeholder" => "Confirm Password", "aria-describedby" => "basic-addon1", "tabindex" => "9")); ?>
 							
 						</div>
 					</div>
@@ -42,7 +45,7 @@
 			<div class="row">
 				<div class="col-xs-4 col-sm-3 col-md-3">
 					<span class="button-checkbox">	
-						<?php echo form_button(array("name" => "agree", "class"=>"btn", "data-color"=>"info", "tabindex"=>"9", "content"=>"I Agree"));
+						<?php echo form_button(array("name" => "agree", "class"=>"btn", "data-color"=>"info", "tabindex"=>"10", "content"=>"I Agree"));
 							  echo form_checkbox(array("name" =>"t and c", "id"=>"t_and_c", "class"=>"hidden", "value"=>"1" ));
 						 ?>					
 					</span>
@@ -56,7 +59,7 @@
 			<div class="row">
 
 				<div class="col-xs-12 col-md-6">
-					<?php echo form_submit(array("name" => "register", "value" => "Register", "class" => "btn btn-primary btn-block btn-lg", "tabindex"=>"10"));  ?>
+					<?php echo form_submit(array("name" => "register", "value" => "Register", "class" => "btn btn-primary btn-block btn-lg", "tabindex"=>"11"));  ?>
 				</div>
 				<div class="col-xs-12 col-md-6">
 					<?php echo anchor("main_controller/login", "Login", array("class"=> "btn btn-success btn-block btn-lg")) ?>

@@ -1,5 +1,5 @@
-<div class="container" style="margin-top:30px;">
-<div class="col-md-4">
+<div class="container" style="margin-top:100px;">
+<div class="col-md-4 col-md-offset-4">
     <div class="login-panel panel panel-default">
                         <div class="panel-heading">
                             <h3 class="panel-title">Sign In</h3>
@@ -8,7 +8,7 @@
                             <?php echo form_open("user_controller/login", array("role" =>"form")); ?>  <!--   <form role="form"> -->
                                 <fieldset>
                                     <div class="form-group">
-                                        <?php  echo form_input(array("name" => "username", "placeholder" => "Email", "class" => "form-control", "aria-describedby" => "basic-addon1", "autofocus" => "")); ?>
+                                        <?php  echo form_input(array("name" => "username", "placeholder" => "Username", "class" => "form-control", "aria-describedby" => "basic-addon1", "autofocus" => "")); ?>
                                 
                                     </div>
                                     <div class="form-group">

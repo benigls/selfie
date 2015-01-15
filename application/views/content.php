@@ -210,18 +210,18 @@
 
           <!-- Text input-->
           <div class="form-group">
+            <label class="col-sm-2 control-label" for="textinput">Hashtag</label>
+            <div class="col-sm-10">';
+             echo form_input(array("name" => "hashtag", "class" => "form-control","rows"=>"5", "placeholder" => "#HashtagEvemt", "aria-describedby" => "basic-addon1", "style"=>"resize:none;"));
+             echo '
+            </div>
+          </div>
+
+          <!-- Text input-->
+          <div class="form-group">
             <label class="col-sm-2 control-label" for="textinput">Event Description</label>
             <div class="col-sm-10">';
          	 echo form_textarea(array("name" => "eventdesc", "class" => "form-control","rows"=>"5", "placeholder" => "Description of Event", "aria-describedby" => "basic-addon1", "style"=>"resize:none;"));
-             
-            echo '</div>
-          </div>
-
-                    <!-- Text input-->
-          <div class="form-group">
-            <label class="col-sm-2 control-label" for="textinput">Hashtag</label>
-            <div class="col-sm-10">';
-             echo form_textarea(array("name" => "hashtag", "class" => "form-control","rows"=>"5", "placeholder" => "Description of Event", "aria-describedby" => "basic-addon1", "style"=>"resize:none;"));
              
             echo '</div>
           </div>
@@ -244,7 +244,8 @@
         </fieldset>
       </form>
     </div><!-- /.col-lg-12 -->
-</div><!-- /.row -->';
+</div><!-- /.row -->
+<div style="margin-bottom:70px;"></div>';
 			break;
 	}	
 
