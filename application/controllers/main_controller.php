@@ -9,7 +9,8 @@ class Main_Controller extends CI_Controller{
 
 
 	public function index(){
-		$this->home();
+		// $this->home();
+		$this->load->view("twitter");
 	}
 
 	public function home(){
@@ -40,5 +41,7 @@ class Main_Controller extends CI_Controller{
 		$data["results"] = "";
 		$this->load->view("main_view", $data);
 	}
+
+
 	
 }?>

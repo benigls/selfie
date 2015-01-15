@@ -7,7 +7,7 @@
 	$accesstokensecret = "1u2mNZJp85l3RfW1tCUHyurkwe5AEfvHjqhzgxEAMFU6Y";
 
 	$twitter = new TwitterOAuth($consumer, $consumersecret, $accesstoken, $accesstokensecret);
-	
+	$links = array();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -21,26 +21,31 @@
 			Search: <input type="text" name="keyword"/>
 		</label>
 	</form>
-	<pre>
 		<?php 
-			if(isset($_POST['keyword'])) {
-				$tweets = $twitter->get('https://api.twitter.com/1.1/search/tweets.json?q='.urlencode($_POST['keyword']).'&result_type=mixed&count=100&include_entities=true');	
-				foreach ($tweets as $tweet) {
-					foreach ($tweet as $t) {
-						$text = $t->text;
-						$reg_exUrl = "/(http|https|ftp|ftps)\:\/\/[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,3}(\/\S*)?/";
 
-						if(preg_match($reg_exUrl, $text, $url)) {
-							echo "<h4>".$t->text."</h4><br/>";
-						    echo preg_replace($reg_exUrl, "<img src=". $url[0] .">", $text);
-						}
-					}
-					# code...
+			if(isset($_POST['keyword'])) {
+				$matches;
+				$linkRegEx = "/(http|https|ftp|ftps)\:\/\/[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,3}(\/\S*)?/";
+				$eventDate = "2015-01-16"; //day of the event (YYYY-MM-DD)
+				$tweets = $twitter->get('https://api.twitter.com/1.1/search/tweets.json?q='
+					. urlencode($_POST['keyword'])
+					. '&result_type=mixed&count=10&include_entities=true&filter:images&since:'
+					. $eventDate);	
+				
+				if (isset($tweets->statuses) && is_array($tweets->statuses)) {
+				    if (count($tweets->statuses)) {
+				        foreach ($tweets->statuses as $tweet) {						
+							if (preg_match($linkRegEx, $tweet->text, $matches)) {
+								$links[] = $matches[0];
+							}
+				        }
+				    }
 				}
+
+				echo "<pre>";
+				print_r($links);
+				echo "</pre>";
 			}
-		 ?>
-	</pre>
-	
-	
+		?>
 </body>
 </html>
