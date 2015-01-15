@@ -17,5 +17,13 @@ class MY_Model extends CI_Model{
 	public function delete($tblName, $tablepk){
 		$this->db->delete($tblName, array("id" => $tablepk)); 
 	}
+
+	public function login(){
+		$query = $this->db->get("user_tbl");
+
+		foreach ($query->result() as $row) {
+	    	if()
+		}
+	}
 }
 ?>

@@ -7,11 +7,11 @@ class User_Controller extends CI_Controller{
 			$this->load->helper(array('form', 'url', 'html'));
 	}
 
-	public function register(){
-		$this->load->model("pendinguser_model");
+	public function login(){
+		$this->load->model("user_model");
 
-		if($this->input->post("register")){
-			$this->pendinguser_model->insert_pendinguser();
+		if($this->input->post("my_login")){
+			$this->user_model->login_user();
 			// $this->view_movie();
 		}
 	}

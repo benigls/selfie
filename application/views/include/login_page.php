@@ -3,7 +3,7 @@
 				  <div class="panel-body">
 				    <div class="container">
 						<table class="table table-responsive">';
-							echo form_open("main_controller/login");
+							echo form_open("user_controller/login_user");
 							echo'
 							<tr>
 								<td>
