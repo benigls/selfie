@@ -113,7 +113,7 @@
 		echo form_close();
 		echo anchor("main_controller/addevent/".$id."", "<strong style = 'font-size:35px;'>Add Event</strong>", array("class"=>"navbar-brand"));
 		break;
-
+		case "addevent_page";
 			echo '<div class="row" style="margin-top:50px;">
     <div class="col-md-8 col-md-offset-2">';
       echo form_open("event_controller/add_event/".$id."", array("class"=>"form-horizontal", "role"=>"form"));
