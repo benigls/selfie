@@ -10,6 +10,11 @@
 			include_once("include/register_page.php");
 			break;
 		case "admin";
+			//check session
+			if ($this->session->userdata('logged_in') == FALSE) {
+				echo '<div class="alert alert-danger"> Log in first </div>';
+			}
+			else {
 			echo form_open("user_controller/login");
 			echo '
 			<div class = "container">
@@ -56,7 +61,7 @@
 						</div>
 					</div>
 					<div style="margin-bottom:70px;"></div>';
-
+				}
 				break;	
 
 			case "sudoadmin";
