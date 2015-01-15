@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default navbar-fixed-top" style = "background-color:rgba(57,112,76,.5);">
+<nav class="navbar navbar-default navbar-fixed-top" >
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">

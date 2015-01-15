@@ -1,4 +1,4 @@
-<footer class="footer-margin" style = "background-color:rgba(57,112,76,.5);">
+<footer class="footer-margin" style = "background-color:black;">
 	<p class="text-center" style = "color:white;">
 
 		KISS&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
