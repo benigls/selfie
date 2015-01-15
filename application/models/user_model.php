@@ -42,7 +42,21 @@ class User_model extends MY_Model{
 	}
 
 	public function view_userevent($id){
-		return $this->getuserevent($id);
+		$this->load->model("data_model");
+	
+		$query = $this->db->get_where("event_tbl", array('user_id' => $id));
+		foreach($query->result() as $row){
+			$date = $row->event_date;
+			$hashtag = $row->hashtag;
+			$count = $this->data_model->twitter($hashtag, $date); 
+
+			$data = array(
+				"tweet_count" => $count
+			);
+			$this->db->where("id", $row->id);
+			$this->db->update("event_tbl", $data); 
+		}
+		return $query->result();
 	}
 
 	public function accept_user($id){
