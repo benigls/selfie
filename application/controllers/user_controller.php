@@ -9,7 +9,7 @@ class User_Controller extends CI_Controller{
 
 	public function login(){
 		$this->load->model("user_model");
-
+		
 		if($this->input->post("my_login")){
 			$this->user_model->login_user();
 			// $this->view_movie();

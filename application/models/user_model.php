@@ -6,16 +6,19 @@ class User_model extends MY_Model{
 		$password =  $this->input->post("password");
 
 		$typeofuser = $this->login($user_name, $password);
+		
 		if($typeofuser == "admin"){
 			$data["results"] = $this->view_pendinguser();
 			$data["content"] = "admin";
 			$this->load->view("main_view", $data);
 		}
 		else if($typeofuser == "user"){
-
+			$data["results"] = $this->view_userevent();
+			$data["content"] = "sudoadmin";
+			$this->load->view("main_view", $data);
 		}
 	}
-
+	
 	public function insert_user(){
 		$dataUser = array(
 			"user_name" =>  $this->input->post("username"),
@@ -36,8 +39,12 @@ class User_model extends MY_Model{
 		return $this->view_all("pending_user_tbl");
 	}
 
+	public function view_userevent(){
+		return $this->getuserevent("event_tbl");
+	}
+
 	public function accept_user($id){
-		$this->getbyid($id);
+		$this->getuserbyid($id);
 		$data["results"] = $this->view_pendinguser();
 		$data["content"] = "admin";
 		$this->load->view("main_view", $data);

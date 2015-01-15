@@ -8,6 +8,7 @@ class Pendinguser_Model extends MY_Model{
 			"pending_middle_name" =>  $this->input->post("middlename"),
 			"pending_last_name" => $this->input->post("lastname"),
 			"pending_password" => $this->input->post("password"),
+			"pending_conpassword" => $this->input->post("confirmpassword"),
 			"pending_email" =>  $this->input->post("email"),
 			"pending_address" =>  $this->input->post("address"),
 			"pending_date_of_term" => $this->input->post("dateofterm"),
