@@ -3,7 +3,7 @@ echo'
 				  <div class="panel-body">
 				    <div class="container">
 						<table class="table table-responsive">';
-							echo form_open("main_controller/register");
+							echo form_open("pendinguser_controller/register");
 							echo'
 							<tr>
 								<td>
