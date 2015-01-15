@@ -1,6 +1,6 @@
 <?php  
-class Data_model extends Dataaccess_data{
-}
+class Data_model extends MY_Model{
+
 	
 }
 ?>

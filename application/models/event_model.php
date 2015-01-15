@@ -1,5 +1,5 @@
 <?php  
-class Event_model extends Dataaccess_event{
+class Event_model extends MY_Model{
 }
 	
 }

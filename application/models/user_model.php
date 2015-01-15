@@ -1,5 +1,5 @@
 <?php  
-class User_model extends Dataaccess_user{
+class User_model extends MY_Model{
 	public function insert_user(){
 		$dataUser = array(
 			"email" =>  $this->input->post("email"),
