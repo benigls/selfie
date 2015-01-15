@@ -25,10 +25,32 @@ class MY_Model extends CI_Model{
 		else{
 			$query = $this->db->get("user_tbl");
 			foreach ($query->result() as $row) {
-		    	
+				if($row->username == $username && $row->password == $passwor){
+					return "user";
+				}
 			}	
 		}
 		return 0;
+	}
+
+	public function getbyid($id){
+		$query = $this->db->get_where("pending_user_tbl", array('id' => $id));
+		foreach ($query->result() as $row) {
+			$data = array(
+			  	"user_name" => $row->pending_user_name,
+			  	"first_name" => $row->pending_first_name,
+			 	"middle_name" => $row->pending_middle_name,
+			 	"last_name" => $row->pending_last_name,
+			 	"password" => $row->pending_password,
+			 	"email" => $row->pending_email,
+			 	"address" => $row->pending_address,
+			 	"date_registered" => date("Y-m-d"),
+			 	"date_of_term" => $row->pending_date_of_term
+			 );
+
+	    	$this->db->insert("user_tbl", $data);
+		}
+	    $this->delete("pending_user_tbl", $id);
 	}
 }
 ?>

@@ -1,4 +1,5 @@
 <?php  
+
 class User_model extends MY_Model{
 	public function login_user(){
 		$user_name =  $this->input->post("username");
@@ -9,6 +10,9 @@ class User_model extends MY_Model{
 			$data["results"] = $this->view_pendinguser();
 			$data["content"] = "admin";
 			$this->load->view("main_view", $data);
+		}
+		else if($typeofuser == "user"){
+
 		}
 	}
 
@@ -30,6 +34,20 @@ class User_model extends MY_Model{
 
 	public function view_pendinguser(){
 		return $this->view_all("pending_user_tbl");
+	}
+
+	public function accept_user($id){
+		$this->getbyid($id);
+		$data["results"] = $this->view_pendinguser();
+		$data["content"] = "admin";
+		$this->load->view("main_view", $data);
+	}
+
+	public function reject_user($id){
+		$this->delete("pending_user_tbl", $id);
+		$data["results"] = $this->view_pendinguser();
+		$data["content"] = "admin";
+		$this->load->view("main_view", $data);
 	}
 }
 ?>

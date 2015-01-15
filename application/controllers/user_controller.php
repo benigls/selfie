@@ -15,4 +15,14 @@ class User_Controller extends CI_Controller{
 			// $this->view_movie();
 		}
 	}
+
+	public function acceptid($id){
+		$this->load->model("user_model");
+		$this->user_model->accept_user($id);
+	}
+
+	public function rejectid($id){
+		$this->load->model("user_model");
+		$this->user_model->reject_user($id);
+	}
 }?>

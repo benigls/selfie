@@ -10,8 +10,9 @@
 			include_once("include/register_page.php");
 			break;
 		case "admin";
-			echo '<table border = "1"> 
+			echo '<table border = "1">'; 
 			echo form_open("user_controller/admin");
+			echo '
 			<th>ID</th>
 			<th>Username</th>
 			<th>First name</th>
@@ -33,16 +34,18 @@
 						<td>'.$records->pending_email.'</td>
 						<td>'.$records->pending_address.'</td>
 						<td>'.$records->pending_date_of_term.'</td>';
-						echo '<td colspan = "8"></td>';
-						echo '<td>';echo form_submit(array("name" => "accept", "value" => "Accept", "class" => "btn btn-primary"));
-						echo form_submit(array("name" => "reject", "value" => "Register", "class" => "btn btn-primary"));echo'</td>';
-				echo'</tr>';
+
+						echo '<td>';
+							echo anchor('user_controller/acceptid/'.$records->id.'', 'Accept'); 
+						echo '</td>';
+						echo '<td>';
+							echo anchor('user_controller/rejectid/'.$records->id.'', 'Reject'); 
+						echo '</td>';
 			}
 
 				echo form_close();
 			echo '</table>';
-
-			break;
+			break;	
 		case "sudoadmin";
 			include_once("include/sudoadmin_page.php");
 			break;
@@ -50,4 +53,6 @@
 			include_once("include/addevent_page.php");
 			break;
 	}	
+
+	if(isset($_POST["tempID"])) echo $_POST["tempID"];
 ?>
