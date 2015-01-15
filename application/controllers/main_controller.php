@@ -17,4 +17,13 @@ class Main_Controller extends CI_Controller{
 		$this->load->view("main_view", $data);
 	}
 
+	public function login(){
+		$data["content"] = "login";
+		$this->load->view("main_view", $data);		
+	}
+	public function register(){
+		$data["content"] = "register";
+		$this->load->view("main_view", $data);
+	}
+
 }?>
