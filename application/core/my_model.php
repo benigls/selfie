@@ -25,7 +25,7 @@ class MY_Model extends CI_Model{
 		else{
 			$query = $this->db->get("user_tbl");
 			foreach ($query->result() as $row) {
-				if($row->username == $username && $row->password == $passwor){
+				if($row->user_name == $username && $row->password == $password){
 					return "user";
 				}
 			}	
@@ -33,7 +33,12 @@ class MY_Model extends CI_Model{
 		return 0;
 	}
 
-	public function getbyid($id){
+	public function getuserevent($id){
+		$query = $this->db->get_where("event_tbl", array('user_id' => $id));
+		return $query->result();
+	}
+
+	public function getuserbyid($id){
 		$query = $this->db->get_where("pending_user_tbl", array('id' => $id));
 		foreach ($query->result() as $row) {
 			$data = array(

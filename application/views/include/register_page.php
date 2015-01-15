@@ -39,12 +39,15 @@
 						</div>
 					</div>
 				</div>
-			<div class="row">
-				<div class="col-xs-4 col-sm-3 col-md-3">
-					<span class="button-checkbox">
-						<button type="button" class="btn" data-color="info" tabindex="9">I Agree</button>
-                        <input type="checkbox" name="t_and_c" id="t_and_c" class="hidden" value="1">
-					</span>
+				<div class="row">
+					<div class="col-xs-4 col-sm-3 col-md-3">
+				    <span class="button-checkbox">
+				        <button class="btn btn-default" tabindex="7" data-color="info" type="button">
+							<i class="state-icon glyphicon glyphicon-unchecked"></i>
+				   			 I Agree
+						</button>
+						<input id="t_and_c" class="hidden" type="checkbox" value="1" name="t_and_c"></input>
+				    </span>
 				</div>
 				<div class="col-xs-8 col-sm-9 col-md-9">
 					 By clicking <strong class="label label-primary">Register</strong>, you agree to the <a href="#" data-toggle="modal" data-target="#t_and_c_m">Terms and Conditions</a> set out by this site, including our Cookie Use.

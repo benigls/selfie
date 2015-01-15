@@ -5,7 +5,7 @@
                         <h3 class="panel-title">Sign In</h3>
                     </div>
                     <div class="panel-body">
-                        <form role="form">
+                        <?php echo form_open("user_controller/login", array("role" =>"form")) ?>  <!--   <form role="form"> -->
                             <fieldset>
                                 <div class="form-group">
                                     <?php  echo form_input(array("name" => "username", "placeholder" => "Email", "class" => "form-control", "aria-describedby" => "basic-addon1", "autofocus" => "")); ?>
@@ -21,8 +21,10 @@
                                 </div>
                                 <!-- Change this to a button or input when using this as a form -->
                                     <?php echo form_submit(array("name" => "my_login", "value" => "Login", "class" => "btn btn-sm-btnsuccess")); ?>
+
                             </fieldset>
-                        </form>
+                        <?php echo form_close() ?>
+                        <!-- </form> -->
                     </div>
                 </div>
 </div>
