@@ -9,7 +9,7 @@ class Main_Controller extends CI_Controller{
 
 
 	public function index(){
-		$this->admin();
+		$this->sudoAdmin();
 	}
 
 	public function home(){
@@ -36,4 +36,9 @@ class Main_Controller extends CI_Controller{
 		$this->load->view("main_view", $data);
 	}
 
+	public function addevent_page(){
+		$data["content"] = "addevent_page";
+		$this->load->view("main_view", $data);
+	}
+	
 }?>
