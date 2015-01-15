@@ -10,21 +10,30 @@
 			include_once("include/register_page.php");
 			break;
 		case "admin";
-			echo '<table border = "10">'; 
 			echo form_open("user_controller/login");
 			echo '
-			<th>ID</th>
-			<th>Username</th>
-			<th>First name</th>
-			<th>Middle name</th>
-			<th>Last name</th>
-			<th>Password</th>
-			<th>Email</th>
-			<th>Address</th>
-			<th>Date of Term</th>';
-			
+			<div class = "container">
+				<div class = "row">
+				<h4>Seek\'s for Approval</h4>
+				<div class="table-responsive">
+					<table id="mytable" class="table table-bordred table-striped">
+					<thead>
+						<th><input type="checkbox" id="checkall" /></th>
+						<th>ID</th>
+						<th>Username</th>
+						<th>First name</th>
+						<th>Middle name</th>
+						<th>Last name</th>
+						<th>Password</th>
+						<th>Email</th>
+						<th>Address</th>
+						<th>Date of Term</th>
+					</thead>';
+
+						
 			foreach($results as $records) {
 				echo'<tr>
+						<td><input type="checkbox" class="checkthis" /></td>
 						<td>'.$records->id.'</td>
 						<td>'.$records->pending_user_name.'</td>
 						<td>'.$records->pending_first_name.'</td>
@@ -34,17 +43,22 @@
 						<td>'.$records->pending_email.'</td>
 						<td>'.$records->pending_address.'</td>
 						<td>'.$records->pending_date_of_term.'</td>';
-
-						echo '<td>';
-							echo anchor('user_controller/acceptid/'.$records->id.'', 'Accept'); 
-						echo '</td>';
-						echo '<td>';
-							echo anchor('user_controller/rejectid/'.$records->id.'', 'Reject'); 
-						echo '</td></tr>';
 			}
 
-				echo form_close();
-			echo '</table>';
+			echo form_close();
+			echo '	</table>
+
+				</div>
+				<div class=pull-right>';
+
+				echo anchor('user_controller/acceptid/'.$records->id.'', 'Accept',(array("class" => "btn btn-primary"))); echo"&nbsp&nbsp"; 
+				echo anchor('user_controller/rejectid/'.$records->id.'', 'Reject',(array("class" => "btn btn-primary"))); 
+				echo'
+				</div>
+				</div>
+			</div>
+			<div style="margin-bottom:70px;"></div>';
+
 			break;	
 
 
