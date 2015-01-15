@@ -8,6 +8,16 @@
 
 	$t = new TwitterOAuth($consumer, $consumersecret, $accesstoken, $accesstokensecret);
 	$links = array();
+
+	function getRealURL($url) {
+		$ch = curl_init($url);
+	    curl_setopt($ch, CURLOPT_NOBODY, true);
+	    curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+	    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+	    curl_exec($ch);
+	    $data = curl_getinfo($ch);
+	    return $data["url"];
+	}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -23,6 +33,8 @@
 			$linkRegEx = "/(http|https|ftpftps)\:\/\/[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,3}(\/\S*)?/";
 			$eventDate = $date; //day of the event (YYYY-MM-DD)
 			$tweets = $t->get('https://api.twitter.com/1.1/search/tweets.json?q='
+			$eventDate = $date;
+			$tweets = $t->get('https://api.twitter.com/1.1/search/tweets.json?q='
 				. urlencode($hashtag)
 				. '&result_type=mixed&count=10&include_entities=true&filter:images&since:'
 				. $eventDate);	
@@ -31,7 +43,7 @@
 			    if (count($tweets->statuses)) {
 			        foreach ($tweets->statuses as $tweet) {						
 						if (preg_match($linkRegEx, $tweet->text, $matches)) {
-							$links[] = $matches[0];
+							$links[] = getRealURL($matches[0]);
 						}
 			        }
 			    }
