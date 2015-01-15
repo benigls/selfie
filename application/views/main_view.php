@@ -8,8 +8,8 @@
 		$data["content"] = $content;  
 		$data["results"] = $results;     
 		$this->view("content.php", $data);   
-		include_once("include/footer.php");     
-		echo'<script src="<?php echo base_url();?>public/js/script.js"></script>';
+		include_once("include/footer.php");
+		include_once("include/scripts.php");
 		?>
 	</body>
 </html>
