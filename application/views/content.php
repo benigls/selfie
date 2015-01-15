@@ -63,7 +63,7 @@
 				echo '<div class="container">
 		    
 		    	<div class="row">
-					<div class="col-md-8 col-md-offset-2">
+					<div class="col-md-10 col-md-offset-1">
 						<div class="panel panel-primary">
 							<div class="panel-heading">
 								<h3 class="panel-title">Your Events</h3>
@@ -84,7 +84,8 @@
 										<th>Event name</th>
 										<th>Event date</th>
 										<th>Event Description</th>
-										<th>Hashtag</th>';
+										<th>Hashtag</th>
+										<th>Tweets</th>';
 					
 								echo '</tr>
 								</thead>
@@ -95,13 +96,13 @@
 											<td>'.$records->event_name.'</td>
 											<td>'.$records->event_date.'</td>
 											<td>'.$records->event_description.'</td>
-											<td>'.$records->hashtag.'</td></tr>';
+											<td>'.$records->hashtag.'</td>
+											<td>20</td></tr>';
 
 									}
 								echo '</tbody>
 							</table>
 						</div>
-					</div>
 				</div>
 			</div>';
 			echo form_close();
