@@ -7,13 +7,9 @@ class Event_Controller extends CI_Controller{
 			$this->load->helper(array('form', 'url', 'html'));
 	}
 
-	public function register(){
-		$this->load->model("pendinguser_model");
-
-		if($this->input->post("register")){
-			$this->pendinguser_model->insert_pendinguser();
-			// $this->view_movie();
-		}
+	public function add_event($id){
+		$this->load->model("event_model");
+		$this->event_model->addevent($id);
 	}
 
 }?>
