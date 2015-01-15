@@ -33,8 +33,6 @@
 			$linkRegEx = "/(http|https|ftpftps)\:\/\/[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,3}(\/\S*)?/";
 			$eventDate = $date; //day of the event (YYYY-MM-DD)
 			$tweets = $t->get('https://api.twitter.com/1.1/search/tweets.json?q='
-			$eventDate = $date;
-			$tweets = $t->get('https://api.twitter.com/1.1/search/tweets.json?q='
 				. urlencode($hashtag)
 				. '&result_type=mixed&count=10&include_entities=true&filter:images&since:'
 				. $eventDate);	
