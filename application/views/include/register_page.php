@@ -17,7 +17,7 @@ echo'
 							<tr>
 								<td>
 									<div class="input-group">
-									  <span class="input-group-addon" id="basic-addon1">Email: </span>';
+									  <span class="input-group-addon" id="basic-addon1">Username: </span>';
 									   echo form_input(array("name" => "username", "class" => "form-control", "placeholder" => "Username", "aria-describedby" => "basic-addon1"));
 									   echo'
 									</div>

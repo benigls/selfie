@@ -9,11 +9,8 @@ class Main_Controller extends CI_Controller{
 
 
 	public function index(){
-<<<<<<< HEAD
 		$this->home();
-=======
-		$this->sudoAdmin();
->>>>>>> 91390776652fd7152d0f58d17d144353834a9203
+		// $this->sudoAdmin();
 	}
 
 	public function home(){

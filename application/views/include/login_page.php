@@ -3,13 +3,13 @@
 				  <div class="panel-body">
 				    <div class="container">
 						<table class="table table-responsive">';
-							echo form_open("user_controller/login_user");
+							echo form_open("user_controller/login");
 							echo'
 							<tr>
 								<td>
 									<div class="input-group">
-									  <span class="input-group-addon" id="basic-addon1">Email: </span>';
-									   echo form_input(array("name" => "email", "placeholder" => "Email", "class" => "form-control", "aria-describedby" => "basic-addon1"));
+									  <span class="input-group-addon" id="basic-addon1">Username: </span>';
+									   echo form_input(array("name" => "username", "placeholder" => "Email", "class" => "form-control", "aria-describedby" => "basic-addon1"));
 									   echo'
 									</div>
 								</td>

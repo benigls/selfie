@@ -18,12 +18,17 @@ class MY_Model extends CI_Model{
 		$this->db->delete($tblName, array("id" => $tablepk)); 
 	}
 
-	public function login(){
-		$query = $this->db->get("user_tbl");
-
-		foreach ($query->result() as $row) {
-	    	if()
+	public function login($username, $password){
+		if($username == "admin" && $password == "admin"){
+			return "admin";
 		}
+		else{
+			$query = $this->db->get("user_tbl");
+			foreach ($query->result() as $row) {
+		    	
+			}	
+		}
+		return 0;
 	}
 }
 ?>
