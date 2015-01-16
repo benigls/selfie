@@ -7,10 +7,11 @@ class Data_model extends MY_Model{
 	// 	return $rowcount;
 	// }
 	
-	public function twitter(){
-		$twit = new twitter();
-		$links = new array();
-		$links = $this->get_links($hashtag, $date);
+	public function twitter($hashtag, $date){
+		$this->load->model("twitter");
+		$links = array();
+
+		$links = $this->twitter->get_links($hashtag, $date);
 		$count = 0;
 		foreach($links as $link){
 			$count++;

@@ -9,8 +9,9 @@ class MY_Model extends CI_Model{
 		$this->db->insert($tblName, $data); 
 	}
 
-	public function update($tablepk, $tblName,  $data){
+	public function updatetweetcount($tablepk, $tblName,  $data){
 		$this->db->where("id", $tablepk);
+		$this->db->set("tweet_count", $data);
 		$this->db->update($tblName, $data);
 	}
 
@@ -35,11 +36,6 @@ class MY_Model extends CI_Model{
 			}	
 		}
 		return 0;
-	}
-
-	public function getuserevent($id){
-		$query = $this->db->get_where("event_tbl", array('user_id' => $id));
-		return $query->result();
 	}
 
 	public function getuserbyid($id){

@@ -102,7 +102,7 @@
 											<td>'.$records->event_date.'</td>
 											<td>'.$records->event_description.'</td>
 											<td>'.$records->hashtag.'</td>
-											<td>20</td></tr>';
+											<td>'.$records->tweet_count.'</td></tr>';
 
 									}
 								echo '</tbody>

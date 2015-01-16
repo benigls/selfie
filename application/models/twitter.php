@@ -6,7 +6,7 @@
 	$accesstoken = "2263639741-q5TcDLrezY94wnVBFpngBEi1YeOPd28btfESmb3";
 	$accesstokensecret = "1u2mNZJp85l3RfW1tCUHyurkwe5AEfvHjqhzgxEAMFU6Y";
 
-	$twitter = new TwitterOAuth($consumer, $consumersecret, $accesstoken, $accesstokensecret);
+	$t = new TwitterOAuth($consumer, $consumersecret, $accesstoken, $accesstokensecret);
 	$links = array();
 
 	function getRealURL($url) {
@@ -27,12 +27,12 @@
 </head>
 <body>
 	<?php
-	class twitter{
+	class cls_twitter{
 		public function get_links($hashtag, $date){
 			$matches;
 			$linkRegEx = "/(http|https|ftpftps)\:\/\/[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,3}(\/\S*)?/";
-			$eventDate = $date;
-			$tweets = $twitter->get('https://api.twitter.com/1.1/search/tweets.json?q='
+			$eventDate = $date; //day of the event (YYYY-MM-DD)
+			$tweets = $t->get('https://api.twitter.com/1.1/search/tweets.json?q='
 				. urlencode($hashtag)
 				. '&result_type=mixed&count=10&include_entities=true&filter:images&since:'
 				. $eventDate);	
@@ -46,7 +46,7 @@
 			        }
 			    }
 			}	
-			return $links
+			return $links;
 		}
 		
 	}
