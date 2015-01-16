@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 15, 2015 at 11:33 PM
+-- Generation Time: Jan 16, 2015 at 01:19 AM
 -- Server version: 5.6.16
 -- PHP Version: 5.5.9
 
@@ -28,10 +28,8 @@ SET time_zone = "+00:00";
 
 CREATE TABLE IF NOT EXISTS `data_tbl` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `img_link` longtext NOT NULL,
   `event_id` int(11) NOT NULL,
   `tweet_link` longtext NOT NULL,
-  `comment` text,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
@@ -48,15 +46,17 @@ CREATE TABLE IF NOT EXISTS `event_tbl` (
   `event_date` datetime NOT NULL,
   `event_description` longtext NOT NULL,
   `hashtag` text NOT NULL,
+  `tweet_count` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=11 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=12 ;
 
 --
 -- Dumping data for table `event_tbl`
 --
 
-INSERT INTO `event_tbl` (`id`, `user_id`, `event_name`, `event_date`, `event_description`, `hashtag`) VALUES
-(10, 3, 'Tree Planting ', '2015-12-15 00:00:00', 'Tree planting for environment.', '#TreePlantingSANJUAN');
+INSERT INTO `event_tbl` (`id`, `user_id`, `event_name`, `event_date`, `event_description`, `hashtag`, `tweet_count`) VALUES
+(10, 3, 'Tree Planting ', '2015-12-15 00:00:00', 'Tree planting for environment.', '#TreePlantingSANJUAN', 2),
+(11, 3, 'Tennis', '2015-12-15 00:00:00', 'Tennis blahblahblah', '#TennisPo', 0);
 
 -- --------------------------------------------------------
 
