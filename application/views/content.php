@@ -111,7 +111,12 @@
 				</div>
 			</div>';
 			echo form_close();
-			echo anchor("main_controller/addevent/".$id."", "<strong style = 'font-size:35px;'>Add Event</strong>", array("class"=>"navbar-brand"));
+			echo'
+				<div class="col-sm-offset-1 col-sm-10">
+				<div class="pull-right">';
+			echo anchor("main_controller/addevent/".$id."", "Add Event", array("class"=>"btn btn-primary btn-block btn-lg"));
+			echo '</div>
+				</div>';
 			break;
 
 		case "addevent_page";
