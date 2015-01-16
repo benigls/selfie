@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 16, 2015 at 03:29 AM
+-- Generation Time: Jan 16, 2015 at 04:12 AM
 -- Server version: 5.6.16
 -- PHP Version: 5.5.11
 
@@ -67,6 +67,7 @@ CREATE TABLE IF NOT EXISTS `pending_user_tbl` (
   `pending_email` text NOT NULL,
   `pending_address` longtext NOT NULL,
   `pending_date_of_term` text NOT NULL,
+  `pending_user_name` text NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
@@ -78,6 +79,7 @@ CREATE TABLE IF NOT EXISTS `pending_user_tbl` (
 
 CREATE TABLE IF NOT EXISTS `user_tbl` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_name` text NOT NULL,
   `first_name` text NOT NULL,
   `middle_name` text NOT NULL,
   `last_name` text NOT NULL,
