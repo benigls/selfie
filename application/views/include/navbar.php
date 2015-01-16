@@ -10,12 +10,26 @@
             <a>
             <?php echo anchor("main_controller", "<strong style = 'font-size:35px;'>Selfie</strong>", array("class"=>"navbar-brand")); ?>
         </div>
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+        
+        <?php if ($this->session->userdata('logged_in') == FALSE) {
+         echo'
+         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
-                <li><?php echo anchor("main_controller/login", "Login"); ?></li>
-                <li><?php echo anchor("main_controller/register", "Register"); ?></li>
+                <li>'; echo anchor("main_controller/login", "Login"); echo '</li>
+                <li>'; echo anchor("main_controller/register", "Register"); echo'</li>
             </ul>
-        </div>
+        </div>';
+        }
+        else{
+         echo'
+         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li>'; echo anchor("main_controller/logout", "Logout"); echo'</li>
+            </ul>
+        </div>';   
+        }
+        ?>
     </div>
    
 </nav>
