@@ -60,11 +60,13 @@ class User_model extends MY_Model{
 			$data = array(
 				"tweet_count" => $count
 			);
-
-			$this->db->query("UPDATE event_tbl SET tweet_count = ".$count."");
+			print_r($count);
+			$this->db->query("UPDATE event_tbl SET tweet_count = ".$count." WHERE id = ".$row->id."");
 			// $this->db->where("id", $row->id);
 			// $this->db->update("event_tbl", $data); 
 		}
+
+		$query = $this->db->get_where("event_tbl", array('user_id' => $id));
 		return $query->result();
 	}
 
