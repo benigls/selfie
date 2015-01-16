@@ -26,6 +26,15 @@ class Main_Controller extends CI_Controller{
 		$data["id"] = "0";
 		$this->load->view("main_view", $data);		
 	}
+
+	public function logout(){
+		$this->session->sess_destroy();
+		$data["content"] = "home";
+		$data["results"] = "";
+		$data["id"] = "0";
+		$this->load->view("main_view",$data);
+	}
+
 	public function register(){
 		$data["content"] = "register";
 		$data["results"] = "";
