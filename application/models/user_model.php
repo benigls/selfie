@@ -25,10 +25,11 @@ class User_model extends MY_Model{
 		$new_data = array(
 				'username' => $user_name,
 				'password' => $password,
+				'login_type' => $data['content'],
+				'id' => $typeofuser["id"],
 				'logged_in' => TRUE,
 			);
 		$this->session->set_userdata($new_data);
-		
 		return $data;
 	}
 	

@@ -22,12 +22,20 @@
         </div>';
         }
         else{
-         echo'
-         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
-                <li>'; echo anchor("main_controller/logout", "Logout"); echo'</li>
-            </ul>
-        </div>';   
+                 echo'
+                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">';
+            if ($this->session->userdata('login_type') == 'admin') {
+                echo '<li>'; echo anchor("main_controller/","Home"); echo "</li>";
+            }
+            else if ($this->session->userdata('login_type') == 'sudoadmin') {
+                echo '<li>'; echo anchor("main_controller/","Home"); echo "</li>";
+                echo '<li>'; echo anchor("main_controller/","Add Event"); echo "</li>";
+            }
+                        echo '<li>'; echo anchor("main_controller/logout", "Logout"); echo'</li>
+                    </ul>
+                </div>';  
+            
         }
         ?>
     </div>
