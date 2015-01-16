@@ -17,7 +17,7 @@ class Twitter{
 			$eventDate = $date;
 			$tweets = $twitterVar->get('https://api.twitter.com/1.1/search/tweets.json?q='
 				. urlencode($hashtag)
-				. '&result_type=mixed&count=10&include_entities=true&filter:images&since:'
+				. '&result_type=mixed&count=100&include_entities=true&filter:images&since:'
 				. $eventDate);	
 			
 			if (isset($tweets->statuses) && is_array($tweets->statuses)) {
