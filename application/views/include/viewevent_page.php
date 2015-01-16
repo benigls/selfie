@@ -13,6 +13,7 @@
 						<div class="info">
 							<h2 class="title">Independence Day</h2>
 							<p class="desc">#HappyIndependenceDay</p>
+							<?php echo anchor("main_controller/tweet1","View tweets"); ?>
 						</div>
 						<div class="social">
 							<ul>
@@ -33,6 +34,7 @@
 						<div class="info">
 							<h2 class="title">One Piece Unlimited World Red</h2>
 							<p class="desc">#PSVita</p>
+							<?php echo anchor("main_controller/tweet2","View tweets"); ?>
 						</div>
 						<div class="social">
 							<ul>
@@ -54,32 +56,7 @@
 						<div class="info">
 							<h2 class="title">Daddy G's 24th Birthday!</h2>
 							<p class="desc">#BarHoppinginErie</p>
-							<ul>
-								<li style="width:33%;">1 <span class="glyphicon glyphicon-ok"></span></li>
-								<li style="width:34%;">3 <span class="fa fa-question"></span></li>
-								<li style="width:33%;">103 <span class="fa fa-envelope"></span></li>
-							</ul>
-						</div>
-						<div class="social">
-							<ul>
-								<li class="facebook" style="width:33%;"><a href="#facebook"><span class="fa fa-facebook"></span></a></li>
-								<li class="twitter" style="width:34%;"><a href="#twitter"><span class="fa fa-twitter"></span></a></li>
-								<li class="google-plus" style="width:33%;"><a href="#google-plus"><span class="fa fa-google-plus"></span></a></li>
-							</ul>
-						</div>
-					</li>
-
-					<li>
-						<time datetime="2014-07-31 1600">
-							<span class="day">31</span>
-							<span class="month">Jan</span>
-							<span class="year">2014</span>
-							<span class="time">4:00 PM</span>
-						</time>
-						<img alt="Disney Junior Live On Tour!" src="http://www.thechaifetzarena.com/images/main/DL13_PiratePrincess_thumb.jpg" />
-						<div class="info">
-							<h2 class="title">Disney Junior Live On Tour!</h2>
-							<p class="desc">#PirateandPrincessAdventure</p>
+							<?php echo anchor("main_controller/tweet3","View tweets"); ?>
 						</div>
 						<div class="social">
 							<ul>

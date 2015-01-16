@@ -34,7 +34,7 @@
       <div class="hero">        
         <hgroup>
             <h1>Reform</h1>        
-            <h3>Trush the youth</h3>
+            <h3>Adapt Change</h3>
         </hgroup>
       </div>
     </div>

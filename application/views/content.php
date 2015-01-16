@@ -186,6 +186,101 @@
 			</div><!-- /.row -->
 			<div style=	"margin-bottom:70px;"></div>';
 			break;
+			case "tweet1";
+			// 
+				echo'
+				<div class = "row">
+				<div class = "container">
+				<div class = "col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+						<blockquote class="twitter-tweet" lang="en"><p>4th of July <a href="https://twitter.com/hashtag/selfie?src=hash">#selfie</a>. <a href="https://twitter.com/hashtag/happyindependenceday?src=hash">#happyindependenceday</a> :) <a href="http://t.co/AYoMS7D05j">pic.twitter.com/AYoMS7D05j</a></p>&mdash; Tyler Stark (@TheTylerStark) <a href="https://twitter.com/TheTylerStark/status/352959963469062146">July 5, 2013</a></blockquote>
+						<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+						
+				</div>
+				</div>
+				</div>
+
+								<div class = "row">
+				<div class = "container">
+				<div class = "col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+					
+				<blockquote class="twitter-tweet" lang="en"><p><a href="https://twitter.com/hashtag/HappyIndependenceDay?src=hash">#HappyIndependenceDay</a> <a href="https://twitter.com/hashtag/selfie?src=hash">#selfie</a> <a href="https://twitter.com/hashtag/TagsForLikes?src=hash">#TagsForLikes</a> <a href="https://twitter.com/hashtag/expresident?src=hash">#expresident</a> <a href="http://t.co/lVdAqS16ie">pic.twitter.com/lVdAqS16ie</a></p>&mdash; di,,!! (@MULLINGCONDOM) <a href="https://twitter.com/MULLINGCONDOM/status/476963429190623233">June 12, 2014</a></blockquote>
+						<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>	
+				</div>
+				</div>
+				</div>
+
+							<div class = "row">
+				<div class = "container">
+				<div class = "col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+					
+				<blockquote class="twitter-tweet" lang="en"><p>Selfie overload! :) <a href="https://twitter.com/hashtag/HappyIndependenceDay?src=hash">#HappyIndependenceDay</a> <a href="https://twitter.com/hashtag/Selfie?src=hash">#Selfie</a> <a href="https://twitter.com/hashtag/POTD?src=hash">#POTD</a> <a href="https://twitter.com/hashtag/NoClass?src=hash">#NoClass</a> <a href="http://t.co/wm0zwqwq6T">pic.twitter.com/wm0zwqwq6T</a></p>&mdash; Jeselyn Ann Saet ♥ (@NitsujhenBieber) <a href="https://twitter.com/NitsujhenBieber/status/476915587990306816">June 12, 2014</a></blockquote>
+				<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+				</div>
+				</div>
+				</div>
+				';
+				break;
+			case "tweet2";
+				echo'
+				<div class = "row">
+				<div class = "container">
+				<div class = "col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+						
+				</div>
+				</div>
+				</div>
+
+								<div class = "row">
+				<div class = "container">
+				<div class = "col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+						
+				</div>
+				</div>
+				</div>
+
+							<div class = "row">
+				<div class = "container">
+				<div class = "col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+					
+				</div>
+				</div>
+				</div>
+				';
+				break;
+			case "tweet3";
+				echo'
+				<div class = "row">
+				<div class = "container">
+				<div class = "col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+						<blockquote class="twitter-tweet" lang="en"><p>4th of July <a href="https://twitter.com/hashtag/selfie?src=hash">#selfie</a>. <a href="https://twitter.com/hashtag/happyindependenceday?src=hash">#happyindependenceday</a> :) <a href="http://t.co/AYoMS7D05j">pic.twitter.com/AYoMS7D05j</a></p>&mdash; Tyler Stark (@TheTylerStark) <a href="https://twitter.com/TheTylerStark/status/352959963469062146">July 5, 2013</a></blockquote>
+						<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+						
+				</div>
+				</div>
+				</div>
+
+								<div class = "row">
+				<div class = "container">
+				<div class = "col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+					
+				<blockquote class="twitter-tweet" lang="en"><p><a href="https://twitter.com/hashtag/HappyIndependenceDay?src=hash">#HappyIndependenceDay</a> <a href="https://twitter.com/hashtag/selfie?src=hash">#selfie</a> <a href="https://twitter.com/hashtag/TagsForLikes?src=hash">#TagsForLikes</a> <a href="https://twitter.com/hashtag/expresident?src=hash">#expresident</a> <a href="http://t.co/lVdAqS16ie">pic.twitter.com/lVdAqS16ie</a></p>&mdash; di,,!! (@MULLINGCONDOM) <a href="https://twitter.com/MULLINGCONDOM/status/476963429190623233">June 12, 2014</a></blockquote>
+						<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>	
+				</div>
+				</div>
+				</div>
+
+							<div class = "row">
+				<div class = "container">
+				<div class = "col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+					
+				<blockquote class="twitter-tweet" lang="en"><p>Selfie overload! :) <a href="https://twitter.com/hashtag/HappyIndependenceDay?src=hash">#HappyIndependenceDay</a> <a href="https://twitter.com/hashtag/Selfie?src=hash">#Selfie</a> <a href="https://twitter.com/hashtag/POTD?src=hash">#POTD</a> <a href="https://twitter.com/hashtag/NoClass?src=hash">#NoClass</a> <a href="http://t.co/wm0zwqwq6T">pic.twitter.com/wm0zwqwq6T</a></p>&mdash; Jeselyn Ann Saet ♥ (@NitsujhenBieber) <a href="https://twitter.com/NitsujhenBieber/status/476915587990306816">June 12, 2014</a></blockquote>
+				<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+				</div>
+				</div>
+				</div>
+				';
+				break;
+
 	}//end of switch
 
 	if(isset($_POST["tempID"])) echo $_POST["tempID"];

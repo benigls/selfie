@@ -13,12 +13,6 @@ class User_Controller extends CI_Controller{
 		if($this->input->post("my_login")){
 			$temp = $this->user_model->login_user();
 			$this->load->view("main_view", $temp[0]);
-
-			$respsonse = array("tweetsId" => $temp[0]);
-
-			$this->output
-				->set_content_type("application/json")
-				->set_output(json_encode($respsonse));
 		}
 	}
 
