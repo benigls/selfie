@@ -19,6 +19,7 @@ class User_model extends MY_Model{
 			$data["results"] = $resultLinks[0];
 			$data["id"] = $typeofuser["id"];
 			$data["content"] = "sudoadmin";
+			return array($data, $resultLinks[1]);
 			// $this->load->view("main_view", $data);
 		}
 		$new_data = array(
@@ -28,7 +29,7 @@ class User_model extends MY_Model{
 			);
 		$this->session->set_userdata($new_data);
 		
-		return array($data, $resultLinks[1]);
+		return $data;
 	}
 	
 	public function insert_user(){
