@@ -17,6 +17,15 @@ echo'
 							<tr>
 								<td>
 									<div class="input-group">
+									  <span class="input-group-addon" id="basic-addon1">Email: </span>';
+									   echo form_input(array("name" => "username", "class" => "form-control", "placeholder" => "Username", "aria-describedby" => "basic-addon1"));
+									   echo'
+									</div>
+								</td>
+							</tr>	
+							<tr>
+								<td>
+									<div class="input-group">
 									  <span class="input-group-addon" id="basic-addon1">Password: </span>';
 									   echo form_password(array("name" => "password", "class" => "form-control", "placeholder" => "Password", "aria-describedby" => "basic-addon1"));
 									  echo'
@@ -63,7 +72,7 @@ echo'
 								<td>
 									<div class="input-group">
 									  <span class="input-group-addon" id="basic-addon1">Date of Term: </span>';
-									  echo form_input(array("name" => "dateofterm", "class" => "form-control", "placeholder" => "Date of Term", "aria-describedby" => "basic-addon1"));
+									  echo form_input(array("name" => "dateofterm", "class" => "form-control", "placeholder" => "2013 - 2014", "aria-describedby" => "basic-addon1"));
 									  echo'
 									</div>
 								</td>

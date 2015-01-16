@@ -3,16 +3,18 @@
 class Pendinguser_Model extends MY_Model{
 	public function insert_pendinguser(){
 		$dataUser = array(
-			"firstName" =>  $this->input->post("firstname"),
-			"middleName" =>  $this->input->post("middlename"),
-			"lastName" => $this->input->post("lastname"),
-			"password" => $this->input->post("password"),
-			"email" =>  $this->input->post("email"),
-			"address" =>  $this->input->post("address"),
-			"dateOfTerm" => $this->input->post("dateofterm"),
+			"pending_username" =>  $this->input->post("username"),
+			"pending_first_name" =>  $this->input->post("firstname"),
+			"pending_middle_name" =>  $this->input->post("middlename"),
+			"pending_last_name" => $this->input->post("lastname"),
+			"pending_password" => $this->input->post("password"),
+			"pending_email" =>  $this->input->post("email"),
+			"pending_address" =>  $this->input->post("address"),
+			"pending_date_of_term" => $this->input->post("dateofterm"),
 		);
 
-		$this->insert("pending_user_tbl", $data);
+		$this->insert("pending_user_tbl", $dataUser);
+		// $this->delete("pending_user_tbl")
 	}
 }
 ?>
