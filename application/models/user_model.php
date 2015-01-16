@@ -80,7 +80,7 @@ class User_model extends MY_Model{
 
 	public function accept_user($id){
 		$this->getuserbyid($id);
-		$data["results"] = $this->view_pendinguser();print_r($count);
+		$data["results"] = $this->view_pendinguser();
 		$data["content"] = "admin";
 		$data["id"] = "0";
 		$this->load->view("main_view", $data);

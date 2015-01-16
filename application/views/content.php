@@ -6,13 +6,13 @@
 		case "login":
 			include_once("include/login_page.php");
 			break;
-		case "register";
+		case "register":
 			include_once("include/register_page.php");
 			break;
-		case "viewevent";
+		case "viewevent":
 			include_once("include/viewevent_page.php");
 			break;
-		case "admin";
+		case "admin":
 			//check session
 			if ($this->session->userdata('logged_in') == FALSE) {
 				echo '<div class="alert alert-danger"> Log in first </div>';
@@ -67,7 +67,7 @@
 				}
 				break;	
 
-			case "sudoadmin";
+			case "sudoadmin":
 				echo '<div class="container">
 		    
 		    	<div class="row">
@@ -112,7 +112,7 @@
 							</table>
 						</div>
 				</div>
-			</div>';
+			</div></div>';
 			echo form_close();
 			echo'
 				<div class="col-sm-offset-1 col-sm-10">
@@ -122,7 +122,7 @@
 				</div>';
 			break;
 
-		case "addevent_page";
+		case "addevent_page":
 			echo '<div class="row" style="margin-top:50px;">
 			<div class="col-md-8 col-md-offset-2">';
 			echo form_open("event_controller/add_event/".$id."", array("class"=>"form-horizontal", "role"=>"form"));
