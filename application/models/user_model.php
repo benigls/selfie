@@ -50,8 +50,8 @@ class User_model extends MY_Model{
 
 	public function view_userevent($id){
 		$this->load->model("data_model");
-	
 		$query = $this->db->get_where("event_tbl", array('user_id' => $id));
+
 		foreach($query->result() as $row){
 			$date = $row->event_date;
 			$hashtag = $row->hashtag;
@@ -60,15 +60,17 @@ class User_model extends MY_Model{
 			$data = array(
 				"tweet_count" => $count
 			);
-			$this->db->where("id", $row->id);
-			$this->db->update("event_tbl", $data); 
+
+			$this->db->query("UPDATE event_tbl SET tweet_count = ".$count."");
+			// $this->db->where("id", $row->id);
+			// $this->db->update("event_tbl", $data); 
 		}
 		return $query->result();
 	}
 
 	public function accept_user($id){
 		$this->getuserbyid($id);
-		$data["results"] = $this->view_pendinguser();
+		$data["results"] = $this->view_pendinguser();print_r($count);
 		$data["content"] = "admin";
 		$data["id"] = "0";
 		$this->load->view("main_view", $data);

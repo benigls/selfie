@@ -16,7 +16,7 @@ class Data_model extends MY_Model{
 		foreach($links as $link){
 			$count++;
 		}
-
+		;
 		return $count;
 	}
 }
