@@ -15,6 +15,10 @@ class User_Controller extends CI_Controller{
 		}
 	}
 
+	public function logout(){
+		$this->session->sess_destroy();
+	}
+
 	public function acceptid($id){
 		$this->load->model("user_model");
 		$this->user_model->accept_user($id);

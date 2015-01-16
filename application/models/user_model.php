@@ -11,14 +11,21 @@ class User_model extends MY_Model{
 			$data["results"] = $this->view_pendinguser();
 			$data["content"] = "admin";
 			$data["id"] = "0";
-			$this->load->view("main_view", $data);
+			// $this->load->view("main_view", $data);
 		}
 		else if($typeofuser["return"] == "user"){
 			$data["results"] = $this->view_userevent($typeofuser["id"]);
 			$data["id"] = $typeofuser["id"];
 			$data["content"] = "sudoadmin";
-			$this->load->view("main_view", $data);
+			// $this->load->view("main_view", $data);
 		}
+		$new_data = array(
+				'username' => $user_name,
+				'password' => $password,
+				'logged_in' => TRUE,
+			);
+		$this->session->set_userdata($new_data);
+		$this->load->view("main_view", $data);
 	}
 	
 	public function insert_user(){
