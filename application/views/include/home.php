@@ -16,7 +16,7 @@
       <div class="hero">
         <hgroup>
             <h1>Engage</h1>        
-            <h3>Become involve!</h3>
+            <h3>Become involve</h3>
         </hgroup>
       </div>
     </div>

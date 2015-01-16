@@ -4,15 +4,15 @@
 				<ul class="event-list">
 					<li>
 						<time datetime="2014-07-20">
-							<span class="day">4</span>
-							<span class="month">Jul</span>
-							<span class="year">2014</span>
-							<span class="time">ALL DAY</span>
+							<span class="day">15</span>
+							<span class="month">Jan</span>
+							<span class="year">2015</span>
+							<span class="time">12:00pm</span>
 						</time>
-						<img alt="Independence Day" src="https://farm4.staticflickr.com/3100/2693171833_3545fb852c_q.jpg" />
+						<img alt="Mcdo Moment" src="../../public/img/mc.jpg" />
 						<div class="info">
-							<h2 class="title">Independence Day</h2>
-							<p class="desc">#HappyIndependenceDay</p>
+							<h2 class="title">Mcdonald Moment</h2>
+							<p class="desc">#McdoMoment</p>
 							<?php echo anchor("main_controller/tweet1","View tweets"); ?>
 						</div>
 						<div class="social">
@@ -26,14 +26,15 @@
 
 					<li>
 						<time datetime="2014-07-20 0000">
-							<span class="day">8</span>
-							<span class="month">Jul</span>
+							<span class="day">12</span>
+							<span class="month">Dec</span>
 							<span class="year">2014</span>
-							<span class="time">12:00 AM</span>
+							<span class="time">ALL DAY</span>
 						</time>
+
 						<div class="info">
-							<h2 class="title">One Piece Unlimited World Red</h2>
-							<p class="desc">#PSVita</p>
+							<h2 class="title">Tree Planting</h2>
+							<p class="desc">#TreePlanting</p>
 							<?php echo anchor("main_controller/tweet2","View tweets"); ?>
 						</div>
 						<div class="social">
@@ -45,27 +46,7 @@
 						</div>
 					</li>
 
-					<li>
-						<time datetime="2014-07-20 2000">
-							<span class="day">20</span>
-							<span class="month">Jan</span>
-							<span class="year">2014</span>
-							<span class="time">8:00 PM</span>
-						</time>
-						<img alt="My 24th Birthday!" src="https://farm5.staticflickr.com/4150/5045502202_1d867c8a41_q.jpg" />
-						<div class="info">
-							<h2 class="title">Daddy G's 24th Birthday!</h2>
-							<p class="desc">#BarHoppinginErie</p>
-							<?php echo anchor("main_controller/tweet3","View tweets"); ?>
-						</div>
-						<div class="social">
-							<ul>
-								<li class="facebook" style="width:33%;"><a href="#facebook"><span class="fa fa-facebook"></span></a></li>
-								<li class="twitter" style="width:34%;"><a href="#twitter"><span class="fa fa-twitter"></span></a></li>
-								<li class="google-plus" style="width:33%;"><a href="#google-plus"><span class="fa fa-google-plus"></span></a></li>
-							</ul>
-						</div>
-					</li>
+					
 				</ul>
 			</div>
 		</div>
