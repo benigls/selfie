@@ -1,5 +1,6 @@
 <?php  
-class Pendinguser_model extends Dataaccess_pendinguser{
+
+class Pendinguser_Model extends MY_Model{
 	public function insert_pendinguser(){
 		$dataUser = array(
 			"firstName" =>  $this->input->post("firstname"),
@@ -11,7 +12,7 @@ class Pendinguser_model extends Dataaccess_pendinguser{
 			"dateOfTerm" => $this->input->post("dateofterm"),
 		);
 
-		$this->insert($data);
+		$this->insert("pending_user_tbl", $data);
 	}
 }
 ?>
