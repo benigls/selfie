@@ -1,6 +1,7 @@
 <?php  
 
 class User_model extends MY_Model{
+	
 	public function login_user(){
 		$user_name =  $this->input->post("username");
 		$password =  $this->input->post("password");
@@ -14,7 +15,8 @@ class User_model extends MY_Model{
 			// $this->load->view("main_view", $data);
 		}
 		else if($typeofuser["return"] == "user"){
-			$data["results"] = $this->view_userevent($typeofuser["id"]);
+			$resultLinks = $this->view_userevent($typeofuser["id"]);
+			$data["results"] = $resultLinks[0];
 			$data["id"] = $typeofuser["id"];
 			$data["content"] = "sudoadmin";
 			// $this->load->view("main_view", $data);
@@ -25,7 +27,8 @@ class User_model extends MY_Model{
 				'logged_in' => TRUE,
 			);
 		$this->session->set_userdata($new_data);
-		$this->load->view("main_view", $data);
+		
+		return array($data, $resultLinks[1]);
 	}
 	
 	public function insert_user(){
@@ -51,23 +54,24 @@ class User_model extends MY_Model{
 	public function view_userevent($id){
 		$this->load->model("data_model");
 		$query = $this->db->get_where("event_tbl", array('user_id' => $id));
-
+		$links = array();
 		foreach($query->result() as $row){
 			$date = $row->event_date;
 			$hashtag = $row->hashtag;
+			$links = array_merge($links,$this->data_model->twitterlinks($hashtag, $date));
 			$count = $this->data_model->twitter($hashtag, $date); 
 
 			$data = array(
 				"tweet_count" => $count
 			);
-			print_r($count);
+
 			$this->db->query("UPDATE event_tbl SET tweet_count = ".$count." WHERE id = ".$row->id."");
 			// $this->db->where("id", $row->id);
 			// $this->db->update("event_tbl", $data); 
 		}
 
 		$query = $this->db->get_where("event_tbl", array('user_id' => $id));
-		return $query->result();
+		return array($query->result(), $links);
 	}
 
 	public function accept_user($id){

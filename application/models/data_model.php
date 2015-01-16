@@ -18,5 +18,13 @@ class Data_model extends MY_Model{
 		};
 		return $count;
 	}
+
+	public function twitterlinks($hashtag, $date){
+		$this->load->model("twitter");
+		$links = array();
+		$links = $this->twitter->get_links($hashtag, $date);
+		
+		return $links;
+	}
 }
 ?>
