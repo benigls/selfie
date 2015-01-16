@@ -12,7 +12,7 @@ class User_Controller extends CI_Controller{
 		
 		if($this->input->post("my_login")){
 			$temp = $this->user_model->login_user();
-			print_r($temp[1]);
+	
 			$this->load->view("main_view", $temp[0]);
 		}
 	}
