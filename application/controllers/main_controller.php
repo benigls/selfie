@@ -55,5 +55,11 @@ class Main_Controller extends CI_Controller{
 		$data["id"] = "0";
 		$this->load->view("main_view", $data);
 	}
+	public function viewevents(){
+		$data["content"] = "viewevent";
+		$data["results"] = "";
+		$data["id"] = "0";
+		$this->load->view("main_view", $data);	
+	}
 }
 ?>

@@ -9,6 +9,9 @@
 		case "register";
 			include_once("include/register_page.php");
 			break;
+		case "viewevent";
+			include_once("include/viewevent_page.php");
+			break;
 		case "admin";
 			//check session
 			if ($this->session->userdata('logged_in') == FALSE) {

@@ -5,7 +5,7 @@
 
 		<?php 
 		echo'
-				 <nav class="navbar navbar-default navbar-fixed-top" >
+		<nav class="navbar navbar-default navbar-fixed-top" >
 		    <div class="container">
 		        <div class="navbar-header">
 		            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -23,8 +23,10 @@
 		         echo'
 		         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		            <ul class="nav navbar-nav navbar-right">
+		                <li>'; echo anchor("main_controller/viewevents", "View Events"); echo'</li>
 		                <li>'; echo anchor("main_controller/login", "Login"); echo '</li>
 		                <li>'; echo anchor("main_controller/register", "Register"); echo'</li>
+
 		            </ul>
 		        </div>';
 		        }
@@ -41,14 +43,14 @@
 		            }
 		                        echo '<li>'; echo anchor("main_controller/logout", "Logout"); echo'</li>
 		                    </ul>
-		                </div>';  
-		            
+		                </div>
+		               ';         
 		        }
 		        echo'
 		    </div>
 		   
-		</nav>
-		<div class="navbar-margin"></div>';
+		</nav>';
+
 		
 		$data["content"] = $content;  
 		$data["results"] = $results;
